@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Components="clr-namespace:PoznejHrademMaui.Components"
              x:Class="PoznejHrademMaui.Pages.MainPage"
              Title="O Městě">
 
@@ -56,7 +57,7 @@
 
                 </Grid>-->
                 <Label x:Name="infoColize" Text="Počet obyvatel 20 475 (k 31.12.2022) \nRozloha: 74, 27 km2 \nNadmořská výška: 478 m n. m." TextColor="Black"/>
-                <Image Source="cityhistolititle.png"/>
+                <Components:TittleLayout  Text="{StaticResource MPCityHistoliTitle}" ImageSource="interest_icon.png"/>
                 <Label Grid.Column="1" Text="Jihovýchodní Čechy mají své osobité kouzlo. Krajina, protkaná hladinami potoků, řek a zejména rybníků, se tu z rovinaté Třeboňské pánve zdvíhá v zalesněné kopce České Kanady, aby na malém kousku země dala vyniknout své rozmanitosti. A uprostřed vší té přírodní krásy spočívá skutečný klenot:" TextColor="Black"/>
                 <CollectionView x:Name="HistoryCityColection">
                     <CollectionView.ItemTemplate>

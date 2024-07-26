@@ -2,6 +2,9 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PoznejHrademMaui.Resources.Styles.TextsPages.MainPageDictonary">
+    <x:String x:Key="MPCityHistoliTitle">Zde se dožvíš informaci,o tom co se dělo v Hradci...</x:String>
+    
+    
     <x:String x:Key="firstMPItem">město nad rybníkem Vajgar, v jehož hladině se zrcadlí nádherné panorama gotického hradu a renesančního zámku, němého svědka zašlé slávy jeho někdejších šlechtických obyvatel</x:String>
     <x:String x:Key="secondMPItem">město na 15. poledníku, který protíná farní kostel Nanebevzetí Panny Marie s vysokou městskou věží, rozhlížející se daleko do kraje</x:String>
     <x:String x:Key="threeMPItem">město, jež ještě v polovině 17. století patřilo k největším v Českém království</x:String>

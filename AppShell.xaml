@@ -6,8 +6,8 @@
     xmlns:local="clr-namespace:PoznejHrademMaui.Pages"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Shell.FlyoutBehavior="Flyout"
-    Shell.BackgroundColor="#892f3b"
-    FlyoutBackground="Aqua"
+    Shell.BackgroundColor="{StaticResource Primary}"
+    FlyoutBackground="{StaticResource Primary}"
     Title="PoznejHrademMaui">
     <ShellContent
         Title="O Městě"
@@ -18,20 +18,41 @@
         Title="Jak a proč hrát"
         ContentTemplate="{DataTemplate local:HowAndWhyPlayPage}"
         Route="HowAndWhyPlayPage" />
+    <ShellContent
+        Title="Tajenka"
+        ContentTemplate="{DataTemplate local:EnigmaPage}"
+        Route="EnigmaPage" />
     <Shell.ItemTemplate>
         <DataTemplate>
-            <StackLayout VerticalOptions="End" WidthRequest="500" HeightRequest="40" HorizontalOptions="FillAndExpand" IsClippedToBounds="False" InputTransparent="False" IgnoreSafeArea="False" >
-                <Grid RowDefinitions="*,20,*" VerticalOptions="CenterAndExpand" ColumnDefinitions="50,*">
-                    <Image Source="{Binding FlyoutIcon}" Margin="5" WidthRequest="30" Grid.Row="1" HeightRequest="30">
-                        <Image.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="{StaticResource Secondary}" />
-                        </Image.Behaviors>
-                    </Image>
+            <Grid RowDefinitions="*,20,*,1" VerticalOptions="CenterAndExpand" HeightRequest="50" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" ColumnDefinitions="50,*">
+               
+            <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor"
+                                    Value="Transparent" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor"
+                                    Value="#95FFFFFF" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups> <Image Source="{Binding FlyoutIcon}" Margin="5" WidthRequest="30" Grid.Row="1" HeightRequest="30">
+                    <Image.Behaviors>
+                        <toolkit:IconTintColorBehavior TintColor="{StaticResource Black}" />
+                    </Image.Behaviors>
+                </Image>
                 <Label Text="{Binding Title}" Grid.Column="1" Grid.Row="1"/>
+                <Label HeightRequest="1" Grid.Row="3" Grid.ColumnSpan="2" BackgroundColor="Black"/>
             </Grid>
-                <Label HeightRequest="1" BackgroundColor="Black"/>
-            </StackLayout>
 
         </DataTemplate>
     </Shell.ItemTemplate>
+
 </Shell>

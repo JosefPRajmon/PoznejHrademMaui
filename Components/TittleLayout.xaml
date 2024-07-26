@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             MaximumHeightRequest="200"
+             x:Class="PoznejHrademMaui.Components.TittleLayout">
+    <Grid RowDefinitions="0.3*,7*" Padding="20,0" ColumnDefinitions="0.6*,0.4*" SizeChanged="Grid_SizeChanged">
+        <Frame x:Name="frameLay" VerticalOptions="EndAndExpand" BackgroundColor="{StaticResource Primary}" Grid.Row="1" Grid.ColumnSpan="2">
+            <Label x:Name="textLabel" Text="{Binding Text}" FontAttributes="Bold" VerticalTextAlignment="Center" TextColor="White"/>
+        </Frame>
+        <Image x:Name="imageL" Source="{Binding ImageSource}" Grid.Column="1" Grid.RowSpan="2" VerticalOptions="End" SizeChanged="Image_SizeChanged"/>
+    </Grid>
+</ContentView>
