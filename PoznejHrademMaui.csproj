@@ -61,15 +61,17 @@
 
 	<ItemGroup>
 		<PackageReference Include="Camera.MAUI" Version="1.5.1" />
+		<PackageReference Include="Camera.MAUI.ZXing" Version="1.0.0" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="9.0.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.70" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.70" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Resources\Styles\TextsPages\HowAndWhyPlayResourceDirectory.xaml.cs">
-	    <DependentUpon>HowAndWhyPlayResourceDirectory.xaml</DependentUpon>
+	  <Compile Update="Resources\Styles\TextsPages\HowAndWhyPlayPageResourceDirectory.xaml.cs">
+	    <DependentUpon>HowAndWhyPlayPageResourceDirectory.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -77,10 +79,19 @@
 	  <MauiXaml Update="Components\TittleLayout.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Resources\Styles\TextsPages\HowAndWhyPlayResourceDirectory.xaml">
+	  <MauiXaml Update="Pages\TraseMapPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\TextsPages\EnigmaPageResourceDirectory.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\TextsPages\HowAndWhyPlayPageResourceDirectory.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\TextsPages\MainPageDictonary.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\TextsPages\PagesResourceDictonary.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

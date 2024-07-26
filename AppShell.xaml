@@ -10,16 +10,16 @@
     FlyoutBackground="{StaticResource Primary}"
     Title="PoznejHrademMaui">
     <ShellContent
-        Title="O Městě"
+        Title="{StaticResource MainPage}"
         Icon="apartmenticon.png"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
     <ShellContent
-        Title="Jak a proč hrát"
+        Title="{StaticResource HowAndWhyPlayPage}"
         ContentTemplate="{DataTemplate local:HowAndWhyPlayPage}"
         Route="HowAndWhyPlayPage" />
     <ShellContent
-        Title="Tajenka"
+        Title="{StaticResource EnigmaPage}"
         ContentTemplate="{DataTemplate local:EnigmaPage}"
         Route="EnigmaPage" />
     <Shell.ItemTemplate>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:camView="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             x:Class="PoznejHrademMaui.Pages.EnigmaPage"
+             Title="{Binding EnigmaPage}">
+    <ScrollView SizeChanged="ScrollView_SizeChanged">
+        <VerticalStackLayout>
+            <camView:CameraView IsVisible="True" HeightRequest="500" WidthRequest="500" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Loaded="CameraView_Loaded" x:Name="cameraView" BarCodeDetectionEnabled="true" BarcodeDetected="cameraView_BarcodeDetected"/>
+            <Grid ColumnDefinitions="*,auto,*">
+                <StackLayout x:Name="Enigma" HorizontalOptions="Center" Grid.Column="1">
+                    <CollectionView x:Name="enigmaProgres">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid ColumnDefinitions="auto,150,*">
+                                    <Label BackgroundColor="Orange" Text="{Binding Id}" FontSize="25" Margin="10"/>
+                                    <Label BackgroundColor="LightGrey" Grid.Column="1" FontSize="23" VerticalOptions="CenterAndExpand" Text="{Binding Enigma}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    <Button Clicked="Button_Clicked" BackgroundColor="LightGrey" Text="{StaticResource btnEnigmaSwitch}" TextTransform="Uppercase"/>
+                </StackLayout>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

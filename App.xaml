@@ -8,8 +8,10 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                <ResourceDictionary Source="Resources/Styles/TextsPages/PagesResourceDictonary.xaml" />
                 <ResourceDictionary Source="Resources/Styles/TextsPages/MainPageDictonary.xaml" />
-                <ResourceDictionary Source="Resources/Styles/TextsPages/HowAndWhyPlayResourceDirectory.xaml" />
+                <ResourceDictionary Source="Resources/Styles/TextsPages/HowAndWhyPlayPageResourceDirectory.xaml" />
+                <ResourceDictionary Source="Resources/Styles/TextsPages/EnigmaPageResourceDirectory.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

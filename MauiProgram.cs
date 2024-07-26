@@ -1,6 +1,7 @@
 ﻿using Camera.MAUI;
 using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using PoznejHrademMaui.DataManager;
 
 namespace PoznejHrademMaui
 {
@@ -22,7 +23,7 @@ namespace PoznejHrademMaui
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
-
+            builder.Services.AddSingleton<DatabaseService>();
             return builder.Build();
         }
     }
