@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Components="clr-namespace:PoznejHrademMaui.Components"
              x:Class="PoznejHrademMaui.Pages.HowAndWhyPlayPage"
              Title="HowAndWhyPlayPage">
     <ScrollView>
@@ -19,7 +20,8 @@
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
-                    <Image Source="zastavkynadpisv2.png"/>
+                <Components:TittleLayout  Text="{StaticResource stopsTitle}" ImageSource="interest_icon.png"/>
+                
                     <Grid ColumnDefinitions="30,auto" RowDefinitions="*,*,*,*,*,*,*,*" x:Name="addColm">
                         <!--   <Label Text="1" HorizontalOptions="Center" Padding="10" BackgroundColor="Orange"/>
                      <Label Grid.Column="1" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Text="jvghgj"/>-->
