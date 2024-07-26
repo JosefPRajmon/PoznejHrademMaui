@@ -1,4 +1,6 @@
-﻿namespace PoznejHrademMaui
+﻿
+
+namespace PoznejHrademMaui
 {
     public partial class AppShell : Shell
     {
@@ -6,5 +8,6 @@
         {
             InitializeComponent();
         }
+
     }
 }

@@ -1,4 +1,4 @@
-﻿using PoznejHrademMaui.Models;
+﻿
 
 namespace PoznejHrademMaui.Pages
 {
@@ -26,7 +26,6 @@ namespace PoznejHrademMaui.Pages
         {
             InitializeComponent();
             BindingContext=this;
-            ScreenHelper screenHelper = new ScreenHelper();
             aboutCityColection.ItemsSource = Items;
             HistoryCityColection.ItemsSource= ItemsHistory;
 

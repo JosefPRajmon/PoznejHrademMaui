@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PoznejHrademMaui.Resources.Styles.TextsPages.EnigmaPageResourceDirectory">
+    <x:Int16 x:Key="keysCount">9</x:Int16>
+    <x:String x:Key="key1">PO</x:String>
+    <x:String x:Key="key2">VAJGARU</x:String>
+    <x:String x:Key="key3">I NEŽÁRCE</x:String>
+    <x:String x:Key="key4">PLUJE</x:String>
+    <x:String x:Key="key5">SE KRÁSNĚ</x:String>
+    <x:String x:Key="key6">JAKO</x:String>
+    <x:String x:Key="key7">V KAŽDÉ</x:String>
+    <x:String x:Key="key8">POHÁDCE</x:String>
+
+    <x:String x:Key="btnEnigmaSwitch">naskenovat qr kód</x:String>
+</ResourceDictionary>
