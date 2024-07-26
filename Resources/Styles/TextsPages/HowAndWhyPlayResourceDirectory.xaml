@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PoznejHrademMaui.Resources.Styles.TextsPages.HowAndWhyPlayResource_directory">
+    <x:String x:Key="tutorialInformationLineOne">vydej se na trasu vyznačenou v mapě</x:String>
+    <x:String x:Key="tutorialInformationLineTwo">na každém z 8 hlavních tajenkových zastavení najdi QR kód umístěný někde v budově</x:String>
+    
+    
+    <x:String x:Key="tutorialLineOne">sejmi QR kód a získej tajenkové slovo</x:String>
+    <x:String x:Key="tutorialLineTwo">po sejmutí QR kódu na všech 8 místech se dozvíš výslednou tajenkovou větu</x:String>
+    <x:String x:Key="tutorialLineThree">po získaní tajenky budeš vyzván k přihlášení do slosování o ceny</x:String>
+    <x:String x:Key="tutorialLineFour">po vyřešení tajenky se můžete zúčastnit slosování o hodnotné ceny v podobě tabletů</x:String>
+    <x:String x:Key="tutorialLineFive">podmínkou zařazení do slosování je doložení vstupenky nebo razítka z jednoho z osmi objektů, kde jsou umístěna tajenková slova. K nahrání vstupenky budete vyzváni při plném dokončení tajenky.</x:String>
+    <x:String x:Key="tutorialLineSix">možnost zúčastnit se slosování končí 31. října 2023</x:String>
+    <x:String x:Key="tutorialLineSeven">vylosování cen proběhne do 31. prosince 2023</x:String>
+    <x:String x:Key="tutorialLineEight">výherci budou zveřejněni na www.infocentrum.jh.cz, bude jim zaslán email nebo budou kontaktováni telefonicky</x:String>
+    <x:String x:Key="tutorialLineNine">výhra bude k vyzvednutí v Informačním středisku, případně bude výherci zaslána poštou na uvedenou adresu</x:String>
+</ResourceDictionary>

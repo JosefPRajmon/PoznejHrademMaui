@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PoznejHrademMaui.Pages.MainPage"
+             Title="O Městě">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView x:Name="scroll" SizeChanged="scroll_SizeChanged">
+        <Grid   RowDefinitions="Auto,Auto">
+
+            <AbsoluteLayout x:Name="Absolutelay">
+                <Image x:Name="imageTit" AbsoluteLayout.LayoutBounds="0,0" Source="titulkavarianta2.jpg" Grid.RowSpan="3" Aspect="AspectFill" Grid.Row="0" InputTransparent="False" VerticalOptions="FillAndExpand" AnchorY="0" AnchorX="0.7"/>
+                <Grid x:Name="testing"  RowDefinitions="*,auto,150" ColumnDefinitions="25,*,25">
+                    <!--                        <StackLayout BackgroundColor="#4CFF0000" HorizontalOptions="Center" Grid.Row="3" Grid.Column="1" Opacity="0.4">
+                            <Image Source="znak_jind_hradec_m.png" HeightRequest="130" Opacity="0"></Image>
+                            <Label Text="VÍTEJTE VE MĚSTĚ JINDŘÍCHŮV HRADEC" Opacity="0"></Label>
+                            <Label Text="NEŽ SE VYDÁŠ PO CESTĚ, PŘEČTI SI NECO O MĚSTĚ" Opacity="0"></Label>
+                        </StackLayout>-->
+                    <StackLayout BackgroundColor="#CC3F1526"  HorizontalOptions="Center" Grid.Column="1" Grid.Row="3" AnchorX="1" AnchorY="1" Padding="10">
+                        <Image Source="znakjindhradecm.png" HeightRequest="80" Opacity="1"/>
+                        <Label Text="VÍTEJTE VE MĚSTĚ JINDŘÍCHŮV HRADEC" TextColor="WHITE" HorizontalTextAlignment="Center"></Label>
+                        <Label Text="NEŽ SE VYDÁŠ PO CESTĚ, PŘEČTI SI NECO O MĚSTĚ" TextColor="#da6e36" HorizontalTextAlignment="Center"></Label>
+                    </StackLayout>
+                </Grid>
+            </AbsoluteLayout>
+            <StackLayout x:Name="testing1" Padding="20" Grid.Row="1">
+                <Label Grid.Column="1" Text="Jihovýchodní Čechy mají své osobité kouzlo. Krajina, protkaná hladinami potoků, řek a zejména rybníků, se tu z rovinaté Třeboňské pánve zdvíhá v zalesněné kopce České Kanady, aby na malém kousku země dala vyniknout své rozmanitosti. A uprostřed vší té přírodní krásy spočívá skutečný klenot:" TextColor="Black"/>
+                <CollectionView x:Name="aboutCityColection">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="auto,*" Margin="0,10">
+                                <Label Text="⚫" />
+                                <Label Text="{Binding .}" Grid.Column="1" TextColor="Black" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!--<Grid ColumnDefinitions="auto,*" RowDefinitions="auto,auto,auto,auto,auto">
+                    
+                    <Label Grid.Row="1" Text="⚫"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text=" město nad rybníkem Vajgar, v jehož hladině se zrcadlí nádherné panorama gotického hradu a renesančního zámku, němého svědka zašlé slávy jeho někdejších šlechtických obyvatel" TextColor="Black"/>
+                    <Label Text="⚫" Grid.Row="2"/>
+                    <Label Grid.Column="1"  Grid.Row="2" Text="město na 15. poledníku, který protíná farní kostel Nanebevzetí Panny Marie s vysokou městskou věží, rozhlížející se daleko do kraje" TextColor="Black"/>
+                    <Label Text="⚫" Grid.Row="3"/>
+                    <Label Grid.Column="1" Grid.Row="3" Text="město, jež ještě v polovině 17. století patřilo k největším v Českém království" TextColor="Black"/>
+                    <Label Text="⚫" Grid.Row="4"/>
+                    <Label Grid.Column="1" Grid.Row="4" Text="město, jehož historické jádro bylo pro svou vysokou historickou, architektonickou i kulturní hodnotu prohlášeno městskou památkovou rezervací" TextColor="Black"/>
+                    <Label Text="⚫" Grid.Row="5"/>
+                    <Label Grid.Column="1" Grid.Row="5" Text='město vyhledávané pro své výjimečné památky i neporušené přírodní prostředí četnými turisty z Čech i zahraničí, město "zlaté růže" Jindřichův Hradec' TextColor="Black"/>
+
+                </Grid>-->
+                <Label x:Name="infoColize" Text="Počet obyvatel 20 475 (k 31.12.2022) \nRozloha: 74, 27 km2 \nNadmořská výška: 478 m n. m." TextColor="Black"/>
+                <Image Source="cityhistolititle.png"/>
+                <Label Grid.Column="1" Text="Jihovýchodní Čechy mají své osobité kouzlo. Krajina, protkaná hladinami potoků, řek a zejména rybníků, se tu z rovinaté Třeboňské pánve zdvíhá v zalesněné kopce České Kanady, aby na malém kousku země dala vyniknout své rozmanitosti. A uprostřed vší té přírodní krásy spočívá skutečný klenot:" TextColor="Black"/>
+                <CollectionView x:Name="HistoryCityColection">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="auto,*" Margin="0,10">
+                                <Label Text="⚫" />
+                                <Label Text="{Binding .}" Grid.Column="1" TextColor="Black" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+               <!-- <Grid ColumnDefinitions="auto,*" RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto">
+                    <Label Grid.Row="1" Text="⚫"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="10. století Počátky Jindřichova Hradce souvisejí s existencí slovanského hradiska ve strategicky výhodné poloze na ostrohu řeky Nežárky a Hamerského potoka, které bylo důležitým strategickým bodem na jihu přemyslovského státu." TextColor="Black"/>
+                    <Label Grid.Row="2" Text="⚫"/>
+                    <Label Grid.Row="2" Grid.Column="1" Text="12. století Jihovýchodní Čechy dostal v úděl Vítek z Prčice, který toto území rozdělil mezi své syny, kteří se stali zakladateli významných jihočeských šlechtických rodů mající ve svých erbech pětilisté růže: z Landštejna, ze Stráže, z Ústí, Rožmberků a pánů z Hradce." TextColor="Black"/>
+                    <Label Grid.Row="3" Text="⚫"/>
+                    <Label Grid.Row="3" Grid.Column="1" Text="13. století Nejstarší dochovaná písemná zpráva o Hradci pochází z roku 1220, kdy jindřichohradecké panství vlastnil zakladatel rodu pánů z Hradce, Jindřich I., nejstarší syn Vítka z Prčice. Ten na místě dřívějšího hradiska vystavěl gotický hrad, v jehož předhradí z původní řemeslnicko-obchodní osady vzniklo v polovině 13. století město, které nese jméno právě po Jindřichovi." TextColor="Black"/>
+                    <Label Grid.Row="4" Text="⚫"/>
+                    <Label Grid.Row="4" Grid.Column="1" Text="16. století Za posledních pánů z Hradce dosáhlo město vrcholu svého rozvoje. V té době se přestavují původní gotické a staví nové renesanční měšťanské domy na náměstí i v přilehlých ulicích, za severními hradbami se rozrůstá tak zvané Nové město. Měšťané těžili z rušného obchodního a řemeslnického života, zejména z výroby a prodeje sukna." TextColor="Black"/>
+                    <Label Grid.Row="5" Text="⚫"/>
+                    <Label Grid.Row="5" Grid.Column="1" Text="17. století Význam města vzrůstal nejen hospodářsky, ale také vysokým postavením, které na královském dvoře zaujímali hradečtí Vítkovci a po nich Vilém Slavata, do jehož rukou se dostává vláda na Hradci v roce 1604. Když se po třicetileté válce roku 1654 pořizoval soupis obyvatelstva a domů, byl mezi českými městy Jindřichův Hradec se svými 405 domy na druhém místě hned za Prahou. Nedlouho poté však ztratil své významné politické postavení. Od konce 17. století přestal být sídelním městem nových majitelů panství, Černínů, a postupně pak klesal i jeho význam hospodářský." TextColor="Black"/>
+                    <Label Grid.Row="6" Text="⚫"/>
+                    <Label Grid.Row="6" Grid.Column="1" Text="18. století Požár v roce 1773 zničil značný počet předměstských domů a velkou část zámku. Nebyl ale tak ničivý jako požár ve století následujícím." TextColor="Black"/>
+                    <Label Grid.Row="7" Text="⚫"/>
+                    <Label Grid.Row="7" Grid.Column="1" Text="19. století Celé město znovu zachvátil mohutný požár při výročním trhu v roce 1801. Zničeno bylo 318 domů, proboštský kostel, městský špitál, radnice, bývalá jezuitská kolej. Povedlo se zabránit rozšíření požáru na zámek. Následné stavební úpravy přidaly domovním průčelím zejména nové kamenické detaily, štukový dekor. Byla zastavena všechna loubí domů na náměstí. Zbouraly se brány Novoměstská a Rybniční. Zrušila se část hradeb, zasypal se městský příkop a tím se umožnilo založení velkého sadu na rozhraní starého a nového města. Napojení parostrojní železnice Prahy na Vídeň budované mezi léty 1871 - 1887 se městu vyhnulo. Nastal vážný zlom v dějinném vývoji města vedoucí až k postupné ztrátě obchodního a kulturního významu. Teprve r. 1887 bylo město napojeno na hlavní trať a téhož roku zažilo město i první zkoušku Křižíkových elektrických lamp. O deset let později byl zahájen provoz úzkokolejné trati z Jindřichova Hradce do Nové Bystřice." TextColor="Black"/>
+                    <Label Grid.Row="8" Text="⚫"/>
+                    <Label Grid.Row="8" Grid.Column="1" Text="20. století Marie Hoppe Teinitzerová zakládá v roce 1910 ve městě unikátní gobelínové dílny, které prosluly po celém světě." TextColor="Black"/>
+                </Grid>-->
+            </StackLayout>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
