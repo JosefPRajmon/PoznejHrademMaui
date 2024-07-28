@@ -11,6 +11,10 @@
     <x:String x:Key="key6">JAKO</x:String>
     <x:String x:Key="key7">V KAŽDÉ</x:String>
     <x:String x:Key="key8">POHÁDCE</x:String>
+    
+    <!--error scan-->
+    <x:String x:Key="errorTitle">Chyba</x:String>
+    <x:String x:Key="errorMessage">Tento QR kód není v tajence</x:String>
 
     <x:String x:Key="btnEnigmaSwitch">naskenovat qr kód</x:String>
 </ResourceDictionary>

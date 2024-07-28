@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="Resources/Styles/TextsPages/MainPageDictonary.xaml" />
                 <ResourceDictionary Source="Resources/Styles/TextsPages/HowAndWhyPlayPageResourceDirectory.xaml" />
                 <ResourceDictionary Source="Resources/Styles/TextsPages/EnigmaPageResourceDirectory.xaml" />
+                <ResourceDictionary Source="Resources/Styles/TextsPages/PlacesResouceDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

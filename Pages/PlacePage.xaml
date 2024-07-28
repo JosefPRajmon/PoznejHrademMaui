@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:PoznejHrademMaui.Components"
+             x:Class="PoznejHrademMaui.Pages.PlacePage">
+    <ScrollView SizeChanged="ScrollView_SizeChanged">
+        <StackLayout>
+            <CarouselView ItemsSource="{Binding Place.Photo}" x:Name="PhotosGalery" >
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding .}" Aspect="AspectFill"  />
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <Label Text="{Binding Place.Description}" Style="{StaticResource LabelDescription}"/>
+            <StackLayout>
+                <StackLayout.Triggers>
+                    <DataTrigger TargetType="StackLayout" Binding="{Binding Place.Interest.Length}" Value="0">
+                        <Setter Property="IsVisible" Value="False" />
+                    </DataTrigger>
+                </StackLayout.Triggers>
+                <components:TittleLayout Text="{StaticResource Interest}" ImageSource="interest_icon.svg"/>
+                <Label Text="{Binding Place.Interest}"  Style="{StaticResource LabelDescription}"/>
+            </StackLayout>
+            
+            <StackLayout>
+                <StackLayout.Triggers>
+                    <DataTrigger TargetType="StackLayout" Binding="{Binding Place.OpenTime.Length}" Value="0">
+                        <Setter Property="IsVisible" Value="False" />
+                    </DataTrigger>
+                </StackLayout.Triggers>
+                <components:TittleLayout Text="{StaticResource OpenTime}" ImageSource="interest_icon.svg"/>
+                <Label Text="{Binding Place.OpenTime}"  Style="{StaticResource LabelDescription}"/>
+            </StackLayout>
+            
+            <StackLayout>
+                <StackLayout.Triggers>
+                    <DataTrigger TargetType="StackLayout" Binding="{Binding Informationn.Count}" Value="0">
+                        <Setter Property="IsVisible" Value="False" />
+                    </DataTrigger>
+                </StackLayout.Triggers>
+                <components:TittleLayout Text="{StaticResource Information}" ImageSource="interest_icon.svg"/>
+                <!--<Label Text="{Binding Place.Information}"  Style="{StaticResource LabelDescription}"/>-->
+                <CollectionView ItemsSource="{Binding Informationn}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="60,*" Margin="7">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </Grid.GestureRecognizers>
+                                <Image Source="{Binding Icon}" InputTransparent="True"/>
+                                <Label Grid.Column="1" Text="{Binding Info}" InputTransparent="True"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

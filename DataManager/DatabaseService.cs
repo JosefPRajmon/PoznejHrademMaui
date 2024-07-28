@@ -1,4 +1,4 @@
-﻿using PoznejHrademMaui.Models;
+﻿using PoznejHrademMaui.Components;
 using SQLite;
 
 namespace PoznejHrademMaui.DataManager

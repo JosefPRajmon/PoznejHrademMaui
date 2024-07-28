@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true"></application>
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true">
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDrW7atDgV7ng_8Kb8ltsdzfjk0Ek78PDo" />
+		<receiver android:label="Tajenka" android:name="crc6416709d4c78997efe.MyAppWidgetProvider" android:exported="true">
+			<meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidgetprovider" />
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+		</receiver>
+	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.Camera" />

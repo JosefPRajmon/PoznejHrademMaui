@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 8 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-523,-6)">
+        <g id="PersonIcon">
+        </g>
+        <g id="InterestingIcon">
+        </g>
+        <g id="pin" transform="matrix(1,0,0,1,-0.314023,-0.240134)">
+            <circle cx="527.255" cy="10.382" r="3.664" style="fill:url(#_Linear1);"/>
+            <g transform="matrix(-1.25077,-0.0379926,0.0712539,-2.34578,1185.12,77.1831)">
+                <path d="M527.1,16.139L529.859,20.064L524.341,20.064L527.1,16.139Z" style="fill:url(#_Linear2);"/>
+            </g>
+            <g transform="matrix(1,0,0,1,0.406381,-0.221663)">
+                <g transform="matrix(4.45609,0,0,4.45609,528.175,11.7937)">
+                </g>
+                <text x="525.697px" y="11.794px" style="font-family:'ArialMT', 'Arial';font-size:4.456px;">5</text>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-0.0354664,-5.57795,5.57795,-0.0354664,527.017,17.5639)"><stop offset="0" style="stop-color:white;stop-opacity:1"/><stop offset="1" style="stop-color:rgb(158,77,77);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.163667,2.37521,-4.45464,0.087267,527.122,16.8782)"><stop offset="0" style="stop-color:white;stop-opacity:1"/><stop offset="1" style="stop-color:rgb(158,77,77);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>
