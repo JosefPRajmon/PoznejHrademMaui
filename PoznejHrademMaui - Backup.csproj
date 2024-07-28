@@ -60,23 +60,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <AndroidResource Remove="Platforms\Android\Resources\Layout\widget_layout.xml" />
-	  <AndroidResource Remove="Platforms\Android\Resources\xml\appwidgetprovider.xml" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Camera.MAUI" Version="1.5.1" />
 		<PackageReference Include="Camera.MAUI.ZXing" Version="1.0.0" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="9.0.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.70" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.70" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
-		<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="8.0.70" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
-	</ItemGroup>
-	<ItemGroup>
-		<AndroidResource Include="Platforms\Android\Resources\Layout\widget_layout.xml" />
-		<AndroidResource Include="Platforms\Android\Resources\xml\appwidgetprovider.xml" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -89,13 +79,7 @@
 	  <MauiXaml Update="Components\TittleLayout.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\PlacePage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Pages\TraseMapPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\TraseMapStopPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\TextsPages\EnigmaPageResourceDirectory.xaml">
@@ -110,9 +94,10 @@
 	  <MauiXaml Update="Resources\Styles\TextsPages\PagesResourceDictonary.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Resources\Styles\TextsPages\PlacesResouceDictionary.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Resources\drawable\" />
 	</ItemGroup>
 
 </Project>

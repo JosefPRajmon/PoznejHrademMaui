@@ -5,4 +5,5 @@
     <x:String x:Key="MainPage">O Městě</x:String>
     <x:String x:Key="HowAndWhyPlayPage">Jak a proč hrát</x:String>
     <x:String x:Key="EnigmaPage">Tajenka</x:String>
+    <x:String x:Key="TraseMapPage">Mapa trasy</x:String>
 </ResourceDictionary>

@@ -7,7 +7,12 @@ namespace PoznejHrademMaui
         public AppShell()
         {
             InitializeComponent();
+            Routing.RegisterRoute("enigma", typeof(PoznejHrademMaui.Pages.EnigmaPage));
         }
 
+        public Task GoToEnigmaPage(bool camera)
+        {
+            return GoToAsync($"enigma?camera={camera}");
+        }
     }
 }

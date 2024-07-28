@@ -14,6 +14,14 @@ namespace PoznejHrademMaui
                 .UseMauiApp<App>()
                 .UseMauiCameraView()
                 .UseMauiCommunityToolkit()
+                        .ConfigureMauiHandlers(handlers =>
+                        {
+#if ANDROID
+                            handlers.AddHandler<Microsoft.Maui.Controls.Maps.Map, PoznejHrademMaui.Platforms.Android.CustomMapHandler>();
+#elif IOS
+            handlers.AddHandler<Microsoft.Maui.Controls.Maps.Map, PoznejHrademMaui.Platforms.iOS.CustomMapHandler>();
+#endif
+                        })
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -24,6 +32,7 @@ namespace PoznejHrademMaui
             builder.Logging.AddDebug();
 #endif
             builder.Services.AddSingleton<DatabaseService>();
+
             return builder.Build();
         }
     }

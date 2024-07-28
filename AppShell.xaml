@@ -6,6 +6,8 @@
     xmlns:local="clr-namespace:PoznejHrademMaui.Pages"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarTitleColor="White"
+    Shell.TitleColor="White"
     Shell.BackgroundColor="{StaticResource Primary}"
     FlyoutBackground="{StaticResource Primary}"
     Title="PoznejHrademMaui">
@@ -16,12 +18,19 @@
         Route="MainPage" />
     <ShellContent
         Title="{StaticResource HowAndWhyPlayPage}"
+        Icon="how_and_why_play_icon.png"
         ContentTemplate="{DataTemplate local:HowAndWhyPlayPage}"
         Route="HowAndWhyPlayPage" />
     <ShellContent
         Title="{StaticResource EnigmaPage}"
+        Icon="enigma_icon.png"
         ContentTemplate="{DataTemplate local:EnigmaPage}"
         Route="EnigmaPage" />
+    <ShellContent
+        Title="{StaticResource TraseMapPage}"
+        Icon="trase_map_icon.png"
+        ContentTemplate="{DataTemplate local:TraseMapPage}"
+        Route="TraseMapPage" />
     <Shell.ItemTemplate>
         <DataTemplate>
             <Grid RowDefinitions="*,20,*,1" VerticalOptions="CenterAndExpand" HeightRequest="50" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" ColumnDefinitions="50,*">
@@ -45,10 +54,10 @@
                     </VisualStateGroupList>
                 </VisualStateManager.VisualStateGroups> <Image Source="{Binding FlyoutIcon}" Margin="5" WidthRequest="30" Grid.Row="1" HeightRequest="30">
                     <Image.Behaviors>
-                        <toolkit:IconTintColorBehavior TintColor="{StaticResource Black}" />
+                        <toolkit:IconTintColorBehavior TintColor="{StaticResource White}" />
                     </Image.Behaviors>
                 </Image>
-                <Label Text="{Binding Title}" Grid.Column="1" Grid.Row="1"/>
+                <Label Text="{Binding Title}" Grid.Column="1" Grid.Row="1" TextColor="White"/>
                 <Label HeightRequest="1" Grid.Row="3" Grid.ColumnSpan="2" BackgroundColor="Black"/>
             </Grid>
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-948,-16)">
+        <rect id="poznej-mesto" serif:id="poznej mesto" x="0" y="0" width="4560" height="4560" style="fill:none;"/>
+        <g id="poznej-mesto1" serif:id="poznej mesto">
+            <g id="PersonIcon">
+            </g>
+            <g id="InterestingIcon">
+            </g>
+            <g id="pin">
+            </g>
+            <g id="EmailIcon">
+            </g>
+            <g id="LocationIcon">
+            </g>
+            <g id="phone_icon">
+            </g>
+            <g id="web_icon">
+            </g>
+            <g id="EnigmaIcon">
+            </g>
+            <g id="how_and_why_play_icon">
+            </g>
+            <g id="infocentrum_icon">
+            </g>
+            <g id="places_icon">
+            </g>
+            <g id="trase_map_icon">
+            </g>
+            <g id="unnamed_icon">
+                <path d="M949.742,33.357L949.751,26.678L951.104,25.324L957.775,25.324L949.742,33.357ZM960.307,25.324L965.692,25.324L966.755,26.43L966.755,28.078L956.195,38.766L950.95,38.766L949.751,37.738L949.751,35.893L960.307,25.324ZM966.755,31.208L966.755,37.738L965.698,38.796L959.267,38.796L966.755,31.208ZM954.233,24.017C952.79,23.465 952.148,22.66 952.574,21.517C952.985,20.211 953.966,19.474 955.623,19.414C956.928,16.09 959.746,16.05 960.868,19.414C962.851,19.46 963.862,20.225 964.162,21.517C964.284,22.793 963.746,23.7 962.311,24.104L954.233,24.017ZM956.803,22.825C957.174,21.052 956.35,20.49 954.572,20.898C954.383,22.333 954.903,23.166 956.803,22.825ZM957.106,19.648C957.893,18.486 958.68,18.547 959.466,19.566C958.74,20.579 957.957,20.66 957.106,19.648ZM962.311,21.085C960.975,20.496 960.105,21.109 959.922,22.638C961.759,23.28 962.529,22.562 962.311,21.085Z" style="fill:white;stroke:black;stroke-width:0.1px;"/>
+            </g>
+        </g>
+    </g>
+</svg>

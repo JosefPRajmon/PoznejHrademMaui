@@ -1,17 +1,36 @@
 using Camera.MAUI;
 using Camera.MAUI.ZXing;
+using PoznejHrademMaui.Components;
 using PoznejHrademMaui.DataManager;
-using PoznejHrademMaui.Models;
 
 namespace PoznejHrademMaui.Pages;
 
+[QueryProperty(nameof(Camera), "camera")]
 public partial class EnigmaPage : ContentPage
 {
     DatabaseService _databaseService { get; set; }
+    private bool _isProcessingBarcode = false;
+
+    private bool _camera;
+
+    public bool Camera
+    {
+        get => _camera;
+        set
+        {
+            _camera = value;
+        }
+    }
     public EnigmaPage(/*DatabaseService databaseService*/)
     {
 
         InitializeComponent();
+        ConstructorIdenticfunction();
+
+    }
+
+    private void ConstructorIdenticfunction()
+    {
         _databaseService = new DatabaseService();
         cameraView.BarCodeDecoder = new ZXingBarcodeDecoder();
         cameraView.BarCodeOptions = new BarcodeDecodeOptions
@@ -22,8 +41,9 @@ public partial class EnigmaPage : ContentPage
             TryHarder = true,
             TryInverted = true
         };
-
     }
+
+
     public async Task<PermissionStatus> CheckAndRequestLocationPermission()
     {
         PermissionStatus status = await Permissions.CheckStatusAsync<Permissions.Camera>();
@@ -55,7 +75,7 @@ public partial class EnigmaPage : ContentPage
             cameraView.Camera = cameraView.Cameras[0];
             MainThread.BeginInvokeOnMainThread(async () =>
             {
-                try
+                /*try
                 {
                     //await cameraView.StopCameraAsync();
 
@@ -64,7 +84,16 @@ public partial class EnigmaPage : ContentPage
                 {
                 }
                 //await cameraView.StartCameraAsync();
-                cameraView.IsVisible = false;
+                */
+                if (_camera)
+                {
+                    SetCameraToQRCode();
+                }
+                else
+                {
+                    cameraView.IsVisible = false;
+                }
+
             });
 
         }
@@ -76,7 +105,11 @@ public partial class EnigmaPage : ContentPage
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
+        await SetCameraToQRCode();
+    }
 
+    private async Task SetCameraToQRCode()
+    {
         await CheckAndRequestLocationPermission();
         MainThread.BeginInvokeOnMainThread(async () =>
         {
@@ -84,8 +117,8 @@ public partial class EnigmaPage : ContentPage
             Enigma.IsVisible=false;
             await cameraView.StartCameraAsync();
         });
-
     }
+
     protected override void OnAppearing()
     {
         base.OnAppearing();
@@ -108,20 +141,24 @@ public partial class EnigmaPage : ContentPage
 
     private async void cameraView_BarcodeDetected(object sender, Camera.MAUI.ZXingHelper.BarcodeEventArgs args)
     {
+        if (_isProcessingBarcode)
+            return;
 
-        MainThread.InvokeOnMainThreadAsync(async () =>
+        _isProcessingBarcode = true;
+
+        await MainThread.InvokeOnMainThreadAsync(async () =>
         {
             cameraView.IsVisible = false;
-            Enigma.IsVisible=true;
+            Enigma.IsVisible = true;
             await cameraView.StopCameraAsync();
-
         });
-        Task.Run(async () =>
+
+        await Task.Run(async () =>
         {
             ScannedCode scannedCode = await _databaseService.GetScannedCodesAsync(args.Result[0].Text);
             if (scannedCode is null)
             {
-                DisplayAlert(",", "chyba", "ok");
+                MainThread.BeginInvokeOnMainThread(async () => await DisplayAlert((string)Application.Current.Resources["errorTitle"], (string)Application.Current.Resources["errorMessage"], "OK"));
             }
             else
             {
@@ -129,11 +166,12 @@ public partial class EnigmaPage : ContentPage
                 int i = await _databaseService.UpdateScannedCodeAsync(scannedCode);
                 if (i == 1)
                 {
-                    OnAppearing();
+                    MainThread.BeginInvokeOnMainThread(() => OnAppearing());
                 }
             }
+
+            _isProcessingBarcode = false; // Reset flag after processing
         });
-
-
     }
+
 }

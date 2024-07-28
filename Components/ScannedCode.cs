@@ -1,6 +1,5 @@
-﻿
-using SQLite;
-namespace PoznejHrademMaui.Models
+﻿using SQLite;
+namespace PoznejHrademMaui.Components
 {
 
     public class ScannedCode

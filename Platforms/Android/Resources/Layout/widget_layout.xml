@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+                android:padding="16dp" android:background="#892f3b">
+
+    <TextView
+        android:id="@+id/widgetTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pro aktualizaci dat, otevřete aplikaci"
+        android:textSize="24sp" />
+
+    <!-- Další UI prvky mohou být přidány zde -->
+</RelativeLayout>
