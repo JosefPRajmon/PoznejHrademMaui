@@ -15,7 +15,7 @@
         <Grid   RowDefinitions="Auto,Auto">
 
             <AbsoluteLayout x:Name="Absolutelay">
-                <Image x:Name="imageTit" AbsoluteLayout.LayoutBounds="0,0" Source="titulkavarianta2.jpg" Grid.RowSpan="3" Aspect="AspectFill" Grid.Row="0" InputTransparent="False" VerticalOptions="FillAndExpand" AnchorY="0" AnchorX="0.7"/>
+                <Image x:Name="imageTit" AbsoluteLayout.LayoutBounds="0,0" Source="titulka_varianta2.jpg" Grid.RowSpan="3" Aspect="AspectFill" Grid.Row="0" InputTransparent="False" VerticalOptions="FillAndExpand" AnchorY="0" AnchorX="0.7"/>
                 <Grid x:Name="testing"  RowDefinitions="*,auto,150" ColumnDefinitions="25,*,25">
                     <!--                        <StackLayout BackgroundColor="#4CFF0000" HorizontalOptions="Center" Grid.Row="3" Grid.Column="1" Opacity="0.4">
                             <Image Source="znak_jind_hradec_m.png" HeightRequest="130" Opacity="0"></Image>
