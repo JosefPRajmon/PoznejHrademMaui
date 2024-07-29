@@ -30,13 +30,13 @@
                 </Grid>
             </AbsoluteLayout>
             <StackLayout x:Name="testing1" Padding="20" Grid.Row="1">
-                <Label Grid.Column="1" Text="Jihovýchodní Čechy mají své osobité kouzlo. Krajina, protkaná hladinami potoků, řek a zejména rybníků, se tu z rovinaté Třeboňské pánve zdvíhá v zalesněné kopce České Kanady, aby na malém kousku země dala vyniknout své rozmanitosti. A uprostřed vší té přírodní krásy spočívá skutečný klenot:" TextColor="Black"/>
+                <Label Grid.Column="1" Text="Jihovýchodní Čechy mají své osobité kouzlo. Krajina, protkaná hladinami potoků, řek a zejména rybníků, se tu z rovinaté Třeboňské pánve zdvíhá v zalesněné kopce České Kanady, aby na malém kousku země dala vyniknout své rozmanitosti. A uprostřed vší té přírodní krásy spočívá skutečný klenot:" />
                 <CollectionView x:Name="aboutCityColection">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Grid ColumnDefinitions="auto,*" Margin="0,10">
                                 <Label Text="⚫" />
-                                <Label Text="{Binding .}" Grid.Column="1" TextColor="Black" />
+                                <Label Text="{Binding .}" Grid.Column="1"  />
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
@@ -56,15 +56,15 @@
                     <Label Grid.Column="1" Grid.Row="5" Text='město vyhledávané pro své výjimečné památky i neporušené přírodní prostředí četnými turisty z Čech i zahraničí, město "zlaté růže" Jindřichův Hradec' TextColor="Black"/>
 
                 </Grid>-->
-                <Label x:Name="infoColize" Text="Počet obyvatel 20 475 (k 31.12.2022) \nRozloha: 74, 27 km2 \nNadmořská výška: 478 m n. m." TextColor="Black"/>
+                <Label x:Name="infoColize" Text="Počet obyvatel 20 475 (k 31.12.2022) \nRozloha: 74, 27 km2 \nNadmořská výška: 478 m n. m." />
                 <Components:TittleLayout  Text="{StaticResource MPCityHistoliTitle}" ImageSource="interest_icon.png"/>
-                <Label Grid.Column="1" Text="Jihovýchodní Čechy mají své osobité kouzlo. Krajina, protkaná hladinami potoků, řek a zejména rybníků, se tu z rovinaté Třeboňské pánve zdvíhá v zalesněné kopce České Kanady, aby na malém kousku země dala vyniknout své rozmanitosti. A uprostřed vší té přírodní krásy spočívá skutečný klenot:" TextColor="Black"/>
+                <Label Grid.Column="1" Text="Jihovýchodní Čechy mají své osobité kouzlo. Krajina, protkaná hladinami potoků, řek a zejména rybníků, se tu z rovinaté Třeboňské pánve zdvíhá v zalesněné kopce České Kanady, aby na malém kousku země dala vyniknout své rozmanitosti. A uprostřed vší té přírodní krásy spočívá skutečný klenot:"/>
                 <CollectionView x:Name="HistoryCityColection">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Grid ColumnDefinitions="auto,*" Margin="0,10">
                                 <Label Text="⚫" />
-                                <Label Text="{Binding .}" Grid.Column="1" TextColor="Black" />
+                                <Label Text="{Binding .}" Grid.Column="1"  />
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

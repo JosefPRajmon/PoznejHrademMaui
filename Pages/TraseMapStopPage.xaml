@@ -10,7 +10,7 @@
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                     </Grid.GestureRecognizers>
-                    <Image Source="{Binding Photo[0]}"  Background="Yellow" Grid.ColumnSpan="3" Aspect="AspectFit" Grid.RowSpan="2" InputTransparent="True"/>
+                    <Image Source="{Binding Photo[0]}" Grid.ColumnSpan="3" Aspect="AspectFit" Grid.RowSpan="2" InputTransparent="True"/>
                     <Label Text="{Binding Title}" Grid.Column="1" Grid.Row="1" Background="Orange" Margin="0" InputTransparent="True" FontSize="Medium" TextColor="White"/>
                     </Grid>
                 </DataTemplate>

@@ -5,10 +5,35 @@ using System.Runtime.CompilerServices;
 
 namespace PoznejHrademMaui.Pages;
 
-public class Information
+public class Information : INotifyPropertyChanged
 {
-    public string Icon { get; set; }
+    private List<string> icons;
+    public List<string> Icons
+    {
+        get
+        {
+            if (Application.Current.RequestedTheme == AppTheme.Dark)
+            {
+                List<string> newIcons = icons;
+                newIcons.Reverse();
+                return newIcons;
+            }
+            return icons;
+        }
+        set
+        {
+            icons = value;
+            OnPropertyChanged("Icons");
+        }
+    }
     public string Info { get; set; }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
 }
 
 public partial class PlacePage : ContentPage, INotifyPropertyChanged
@@ -53,16 +78,16 @@ public partial class PlacePage : ContentPage, INotifyPropertyChanged
                 switch (split[0])
                 {
                     case "map":
-                        inf.Icon = "location_icon.svg";
+                        inf.Icons = new List<string>() { "location_icon.svg", "light_location_icon.svg" };
                         break;
                     case "tel":
-                        inf.Icon = "phone_icon.svg";
+                        inf.Icons = new List<string>() { "phone_icon.svg", "light_phone_icon.svg" };
                         break;
                     case "mail":
-                        inf.Icon = "email_icon.svg";
+                        inf.Icons = new List<string>() { "email_icon.svg", "light_email_icon.svg" };
                         break;
                     case "web":
-                        inf.Icon = "web_icon.svg";
+                        inf.Icons = new List<string>() { "web_icon.svg", "light_web_icon.svg" };
                         break;
                 }
                 inf.Info = split[1].Trim();
@@ -95,7 +120,7 @@ public partial class PlacePage : ContentPage, INotifyPropertyChanged
             try
             {
 
-                if (datasouce.Icon =="location_icon.svg")
+                if (datasouce.Icons[0] =="location_icon.svg")
                 {
                     IEnumerable<Location> locations = await Geocoding.Default.GetLocationsAsync(datasouce.Info);
 
@@ -103,11 +128,11 @@ public partial class PlacePage : ContentPage, INotifyPropertyChanged
                     var options = new MapLaunchOptions { Name = Title };
                     await Map.Default.OpenAsync(location, options);
                 }
-                else if (datasouce.Icon =="phone_icon.svg")
+                else if (datasouce.Icons[0].Contains("phone_icon.svg"))
                     PhoneDialer.Default.Open(datasouce.Info);
-                else if (datasouce.Icon =="email_icon.svg")
+                else if (datasouce.Icons[0].Contains("email_icon.svg"))
                     await Email.Default.ComposeAsync(new EmailMessage() { Subject = datasouce.Info });
-                else if (datasouce.Icon =="web_icon.svg")
+                else if (datasouce.Icons[0].Contains("web_icon.svg"))
                     await Browser.Default.OpenAsync(datasouce.Info, BrowserLaunchMode.SystemPreferred);
 
             }

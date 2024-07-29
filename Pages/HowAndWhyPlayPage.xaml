@@ -8,14 +8,14 @@
             <StackLayout>
                 <Label HeightRequest="10" BackgroundColor="Transparent"/>
                 <StackLayout Grid.Row="1" Margin="10">
-                    <Label TextColor="Black" Text="Vítejte, rodiče, děti i dospělí! Připravte se na úžasnou stezku plnou zábavy v Jindřichově Hradci! S pomocí aplikace POZNEJ HRADEC. Společně se vydáme na cestu za tajenkou. Čeká nás osm zastavení s odměnou na konci. Tato stezka je stvořená pro všechny, kteří chtějí prožít zábavné objevování památek. Takže do toho, začíná dobrodružství."/>
+                    <Label  Text="Vítejte, rodiče, děti i dospělí! Připravte se na úžasnou stezku plnou zábavy v Jindřichově Hradci! S pomocí aplikace POZNEJ HRADEC. Společně se vydáme na cestu za tajenkou. Čeká nás osm zastavení s odměnou na konci. Tato stezka je stvořená pro všechny, kteří chtějí prožít zábavné objevování památek. Takže do toho, začíná dobrodružství."/>
 
                     <CollectionView x:Name="tutorialInformationColection">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Grid ColumnDefinitions="auto,*" Margin="0,10">
                                     <Label Text="⚫" />
-                                    <Label Text="{Binding .}" Grid.Column="1" TextColor="Black" />
+                                    <Label Text="{Binding .}" Grid.Column="1" />
                                 </Grid>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
@@ -31,7 +31,7 @@
                         <DataTemplate>
                             <Grid ColumnDefinitions="auto,*" Margin="0,10">
                                 <Label Text="⚫" />
-                                <Label Text="{Binding .}" Grid.Column="1" TextColor="Black" />
+                                <Label Text="{Binding .}" Grid.Column="1" />
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
