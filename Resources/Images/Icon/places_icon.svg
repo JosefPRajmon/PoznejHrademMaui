@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 24 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-862,-18)">
+        <rect id="poznej-mesto" serif:id="poznej mesto" x="0" y="0" width="4560" height="4560" style="fill:none;"/>
+        <g id="poznej-mesto1" serif:id="poznej mesto">
+            <g id="PersonIcon">
+            </g>
+            <g id="InterestingIcon">
+            </g>
+            <g id="pin">
+            </g>
+            <g id="EmailIcon">
+            </g>
+            <g id="LocationIcon">
+            </g>
+            <g id="phone_icon">
+            </g>
+            <g id="web_icon">
+            </g>
+            <g id="EnigmaIcon">
+            </g>
+            <g id="how_and_why_play_icon">
+            </g>
+            <g id="infocentrum_icon">
+            </g>
+            <g id="places_icon">
+                <path d="M863.285,36.214L864.126,30.289L864.995,30.289L864.995,26.56L864.112,25.677L864.112,19.617L865.817,19.617L865.817,21.757L867.995,21.757L867.995,19.617L870.826,19.617L870.826,21.757L872.658,21.757L872.658,19.617L874.462,19.617L874.462,25.915L873.574,26.56L873.574,27.644L879.48,29.775L880.406,29.775L880.406,28.504L876.845,26.915L876.845,24.121L878.228,24.121L878.228,25.677L879.733,25.677L879.733,24.121L881.723,24.121L881.723,25.677L882.994,25.677L882.994,24.121L884.471,24.121L884.471,28.878L883.826,29.523L883.826,32.149L884.471,32.149L884.947,36.214L878.873,36.214L878.873,34.485C877.696,32.779 876.303,33.178 875.826,34.485L875.826,36.214L863.285,36.214Z" style="fill:white;stroke:black;stroke-width:0.1px;"/>
+            </g>
+            <g id="trase_map_icon">
+            </g>
+            <g id="unnamed_icon">
+            </g>
+        </g>
+    </g>
+</svg>

@@ -27,6 +27,11 @@
         ContentTemplate="{DataTemplate local:EnigmaPage}"
         Route="EnigmaPage" />
     <ShellContent
+        Title="{StaticResource TraseMapStopPage}"
+        Icon="places_icon.png"
+        ContentTemplate="{DataTemplate local:TraseMapStopPage}"
+        Route="TraseMapStopPage" />
+    <ShellContent
         Title="{StaticResource TraseMapPage}"
         Icon="trase_map_icon.png"
         ContentTemplate="{DataTemplate local:TraseMapPage}"

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-817,-16)">
+        <rect id="poznej-mesto" serif:id="poznej mesto" x="0" y="0" width="4560" height="4560" style="fill:none;"/>
+        <g id="poznej-mesto1" serif:id="poznej mesto">
+            <g id="PersonIcon">
+            </g>
+            <g id="InterestingIcon">
+            </g>
+            <g id="pin">
+            </g>
+            <g id="EmailIcon">
+            </g>
+            <g id="LocationIcon">
+            </g>
+            <g id="phone_icon">
+            </g>
+            <g id="web_icon">
+            </g>
+            <g id="EnigmaIcon">
+            </g>
+            <g id="how_and_why_play_icon">
+            </g>
+            <g id="infocentrum_icon">
+                <path d="M829.499,16.8C835.451,16.8 840.284,21.698 840.284,27.731C840.284,33.764 835.451,38.662 829.499,38.662C823.548,38.662 818.715,33.764 818.715,27.731C818.715,21.698 823.548,16.8 829.499,16.8ZM830.954,19.774C829.951,19.774 829.138,20.546 829.138,21.497C829.138,22.448 829.951,23.22 830.954,23.22C831.956,23.22 832.77,22.448 832.77,21.497C832.77,20.546 831.956,19.774 830.954,19.774ZM827.261,25.75C827.354,26.645 828.7,25.537 828.576,27.268C828.476,28.644 826.222,31.313 827.656,34.015C828.253,35.141 830.542,35.489 832.182,34.015L832.182,33.474L831.087,33.474C829.814,33.538 830.772,30.649 831.087,29.4C831.335,28.417 832.011,26.589 831.087,25.75C829.617,24.462 827.211,25.263 827.261,25.75Z" style="fill:white;"/>
+                <path d="M827.261,25.75C827.211,25.263 829.617,24.462 831.087,25.75C832.011,26.589 831.335,28.417 831.087,29.4C830.772,30.649 829.814,33.538 831.087,33.474L832.182,33.474L832.182,34.015C830.542,35.489 828.253,35.141 827.656,34.015C826.222,31.313 828.476,28.644 828.576,27.268C828.7,25.537 827.354,26.645 827.261,25.75Z" style="fill:none;stroke:black;stroke-width:0.1px;"/>
+                <g transform="matrix(1.21976,0,0,1.19077,-184.659,-5.96424)">
+                    <ellipse cx="831.442" cy="28.297" rx="8.841" ry="9.18" style="fill:none;stroke:black;stroke-width:0.08px;"/>
+                </g>
+                <g transform="matrix(1.08743,0,0,1,-72.8104,0)">
+                    <ellipse cx="831.1" cy="21.497" rx="1.67" ry="1.723" style="fill:none;stroke:black;stroke-width:0.1px;"/>
+                </g>
+            </g>
+            <g id="places_icon">
+            </g>
+            <g id="trase_map_icon">
+            </g>
+            <g id="unnamed_icon">
+            </g>
+        </g>
+    </g>
+</svg>
