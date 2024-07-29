@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-621,-15)">
+        <rect id="poznej-mesto" serif:id="poznej mesto" x="0" y="0" width="4560" height="4560" style="fill:none;"/>
+        <g id="poznej-mesto1" serif:id="poznej mesto">
+            <g id="PersonIcon">
+            </g>
+            <g id="InterestingIcon">
+            </g>
+            <g id="pin">
+            </g>
+            <g id="EmailIcon">
+            </g>
+            <g id="LocationIcon">
+                <path d="M634.796,16.167C641.653,16.167 647.22,21.632 647.22,28.362C647.22,35.093 641.653,40.557 634.796,40.557C627.939,40.557 622.371,35.093 622.371,28.362C622.371,21.632 627.939,16.167 634.796,16.167ZM641.042,22.293L628.46,28.787L634.638,28.787L634.638,35.236L641.042,22.293Z" style="fill:white;"/>
+                <path d="M641.042,22.293L628.46,28.787L634.638,28.787L634.638,35.236L641.042,22.293Z" style="fill:none;"/>
+                <g transform="matrix(1.32452,0,0,1.05631,-210.035,-1.61689)">
+                    <ellipse cx="637.84" cy="28.381" rx="9.38" ry="11.545" style="fill:none;"/>
+                </g>
+            </g>
+            <g id="phone_icon">
+            </g>
+            <g id="web_icon">
+            </g>
+            <g id="EnigmaIcon">
+            </g>
+            <g id="how_and_why_play_icon">
+            </g>
+            <g id="infocentrum_icon">
+            </g>
+            <g id="places_icon">
+            </g>
+            <g id="trase_map_icon">
+            </g>
+            <g id="unnamed_icon">
+            </g>
+        </g>
+    </g>
+</svg>

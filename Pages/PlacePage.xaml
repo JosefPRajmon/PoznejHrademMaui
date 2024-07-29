@@ -48,7 +48,9 @@
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                                 </Grid.GestureRecognizers>
-                                <Image Source="{Binding Icon}" InputTransparent="True"/>
+
+
+                                <Image Source="{Binding Icons[0]}" InputTransparent="True"/>
                                 <Label Grid.Column="1" Text="{Binding Info}" InputTransparent="True"/>
                             </Grid>
                         </DataTemplate>
