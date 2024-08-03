@@ -181,6 +181,7 @@
     <Style TargetType="Label" x:Key="LabelDescription">
         <Setter Property="Margin" Value="20"/>
         <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
     </Style>
 
     <Style TargetType="Span">

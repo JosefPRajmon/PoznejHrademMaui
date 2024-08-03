@@ -22,7 +22,7 @@
         ContentTemplate="{DataTemplate local:HowAndWhyPlayPage}"
         Route="HowAndWhyPlayPage" />
     <ShellContent
-        Title="{StaticResource EnigmaPage}"
+        Title="{DynamicResource EnigmaPage}"
         Icon="enigma_icon.png"
         ContentTemplate="{DataTemplate local:EnigmaPage}"
         Route="EnigmaPage" />
@@ -36,6 +36,11 @@
         Icon="trase_map_icon.png"
         ContentTemplate="{DataTemplate local:TraseMapPage}"
         Route="TraseMapPage" />
+
+
+    <MenuItem Text="Infocentrum" StyleClass="MenuItemLayoutStyle" IconImageSource="infocentrum_icon.svg" x:Name="Infocenter"  >
+    </MenuItem>
+
     <Shell.ItemTemplate>
         <DataTemplate>
             <Grid RowDefinitions="*,20,*,1" VerticalOptions="CenterAndExpand" HeightRequest="50" Margin="0" Padding="0" HorizontalOptions="FillAndExpand" ColumnDefinitions="50,*">

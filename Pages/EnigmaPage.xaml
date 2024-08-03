@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:camView="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
              x:Class="PoznejHrademMaui.Pages.EnigmaPage"
-             Title="{StaticResource EnigmaPage}">
+             Title="{DynamicResource EnigmaPage}">
     <ScrollView SizeChanged="ScrollView_SizeChanged">
         <VerticalStackLayout>
             <camView:CameraView IsVisible="True" HeightRequest="500" WidthRequest="500" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Loaded="CameraView_Loaded" x:Name="cameraView" BarCodeDetectionEnabled="true" BarcodeDetected="cameraView_BarcodeDetected"/>
@@ -22,7 +22,30 @@
                     <Button Clicked="Button_Clicked" BackgroundColor="LightGrey" Text="{StaticResource btnEnigmaSwitch}" TextTransform="Uppercase"/>
                 </StackLayout>
             </Grid>
+            <StackLayout Padding="10" IsVisible="False">
+                <CollectionView x:Name="formColection">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="auto,*" Margin="0,10">
+                                <Label Text="⚫" />
+                                <Label Text="{Binding .}" Grid.Column="1" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <Image Source="ContactIcone.png"/>
+                <Label x:Name="Backdata" FontSize="Large" HorizontalTextAlignment="Center" TextColor="White"/>
+                <Entry Placeholder="Jméno:"  x:Name="NameInput" PlaceholderColor="Gray"  ClearButtonVisibility="WhileEditing"/>
+                <Entry Placeholder="Přijmení: "  x:Name="LastNameInput" PlaceholderColor="Gray"  ClearButtonVisibility="WhileEditing"/>
+                <Entry Placeholder="Ulice a čp:"  x:Name="Streedinput" PlaceholderColor="Gray"  ClearButtonVisibility="WhileEditing"/>
+                <Entry Placeholder="Město/Obec:"  x:Name="CityInput" PlaceholderColor="Gray" ClearButtonVisibility="WhileEditing"/>
+                <Entry Placeholder="PSČ:" x:Name="PScInput"  PlaceholderColor="Gray" Keyboard="Numeric" ClearButtonVisibility="WhileEditing"/>
+                <Entry Placeholder="Email:" x:Name="EmailInput"  PlaceholderColor="Gray" Keyboard="Email" ClearButtonVisibility="WhileEditing"/>
+                <Entry Placeholder="Telefon:" x:Name="PhoneInput"  PlaceholderColor="Gray" Keyboard="Telephone" ClearButtonVisibility="WhileEditing"/>
+                <Button Text="Odeslat do slosování - nahrát vstupenku" Margin="5" Clicked="SendForm" x:Name="sendNV"/>
 
+                <Button Text="Odeslat do slosování - vyfotit vstupenku"  Margin="5" Clicked="TakePhotoSendForm" x:Name="sendVV"/>
+            </StackLayout>
         </VerticalStackLayout>
     </ScrollView>
 
